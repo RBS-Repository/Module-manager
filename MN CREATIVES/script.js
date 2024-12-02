@@ -455,4 +455,49 @@ document.addEventListener('DOMContentLoaded', function() {
             video.pause();
         }
     });
+    
 });
+
+
+function handleSubmit(event) {
+    event.preventDefault();
+    
+    const form = event.target;
+    const submitBtn = form.querySelector('.submit-btn');
+    
+    // Disable the submit button and show loading state
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
+
+    // Get form data
+    const formData = new FormData(form);
+
+    // Submit to Formspree
+    fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+            'Accept': 'application/json'
+        }
+    })
+    .then(response => {
+        if (response.ok) {
+            // Success message
+            alert('Thank you for your message! We will get back to you soon.');
+            form.reset();
+        } else {
+            // Error message
+            throw new Error('Oops! There was a problem submitting your form');
+        }
+    })
+    .catch(error => {
+        alert(error.message);
+    })
+    .finally(() => {
+        // Reset button state
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send Message';
+    });
+
+    return false;
+}
