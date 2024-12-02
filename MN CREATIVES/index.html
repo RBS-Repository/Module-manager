@@ -277,11 +277,15 @@
     <section class="introduction">
         <div class="intro-container">
             <div class="intro-video">
-                <video controls poster="images/video-poster.jpg">
-                    <source src="./videos/Liquid Motion - Self Intro.mp4" type="video/mp4">
-                    <source src="./videos/Liquid Motion - Self Intro.webm" type="video/webm">
-                    Your browser does not support the video tag.
-                </video>
+                <div class="video-wrapper">
+                    <video id="intro-video" poster="images/video-poster.jpg" controls>
+                        <source src="videos/Liquid Motion - Self Intro.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="intro-credits">
+                        <p>Video by <span>MN Creatives</span></p>
+                    </div>
+                </div>
             </div>
 
             <div class="intro-headshot">

@@ -1218,10 +1218,16 @@ html {
 
 .intro-video video {
     width: 100%;
-    min-height: 450px;
+    height: auto;
+    max-width: 100%;
     display: block;
-    border-radius: 20px;
-    object-fit: cover;
+}
+
+/* If using iframe for embedded video */
+.intro-video iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border: none;
 }
 
 .intro-headshot {
