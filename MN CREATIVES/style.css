@@ -2139,3 +2139,30 @@ html {
     line-height: 1.6;
     opacity: 0.8;
 }
+
+.video-wrapper {
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 156, 222, 0.15);
+}
+
+.video-wrapper video {
+    width: 100%;
+    height: 450px; /* Increased height */
+    object-fit: cover; /* This will ensure the video fills the container */
+    display: block;
+}
+
+/* Responsive adjustment for smaller screens */
+@media (max-width: 768px) {
+    .video-wrapper video {
+        height: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .video-wrapper video {
+        height: 300px;
+    }
+}
