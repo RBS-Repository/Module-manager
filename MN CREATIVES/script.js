@@ -439,3 +439,20 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(card);
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const video = document.getElementById('intro-video');
+    
+    // Enable inline playback
+    video.setAttribute('playsinline', '');
+    video.setAttribute('webkit-playsinline', '');
+    
+    // Handle play/pause on mobile touch
+    video.addEventListener('touchstart', function() {
+        if (video.paused) {
+            video.play();
+        } else {
+            video.pause();
+        }
+    });
+});

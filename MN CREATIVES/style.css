@@ -2145,24 +2145,45 @@ html {
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 15px 40px rgba(0, 156, 222, 0.15);
+    position: relative;
+    background: #000;
 }
 
 .video-wrapper video {
     width: 100%;
-    height: 450px; /* Increased height */
-    object-fit: cover; /* This will ensure the video fills the container */
     display: block;
+    margin: 0;
+    padding: 0;
+    background: #000;
 }
 
-/* Responsive adjustment for smaller screens */
+.video-wrapper video::-webkit-media-controls-panel {
+    display: none !important;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+/* Show controls on hover for desktop */
+.video-wrapper video:hover::-webkit-media-controls-panel {
+    display: flex !important;
+    opacity: 1;
+}
+
+/* Show controls on active/focus for mobile */
+.video-wrapper video:active::-webkit-media-controls-panel,
+.video-wrapper video:focus::-webkit-media-controls-panel {
+    display: flex !important;
+    opacity: 1;
+}
+
+.intro-credits {
+    background: #fff;
+    padding: 10px;
+    margin: 0;
+}
+
 @media (max-width: 768px) {
-    .video-wrapper video {
-        height: 400px;
-    }
-}
-
-@media (max-width: 480px) {
-    .video-wrapper video {
-        height: 300px;
+    .video-wrapper {
+        border-radius: 10px;
     }
 }
