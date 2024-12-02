@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me - MN CREATIVES</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="contact.css">
+    <script src="script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="#" class="logo">
+                <img src="images/MN CREATION.png" alt="MN Creatives Logo">
+                <span class="logo-text">MN Creatives</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" onclick="location.href='index.html'">Portfolio</a></li>
+                <li><a href="about.html" onclick="location.href='about.html'">About Me</a></li>
+                <li><a href="contact.html" onclick="location.href='contact.html'">Contact</a></li>
+            </ul>
+            <button class="cta-button">Get In Touch</button>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <div class="info-card animate-up">
+                        <h2>Contact Information</h2>
+                        <p>Feel free to reach out through any of these channels:</p>
+                        
+                        <div class="contact-methods">
+                            <div class="method">
+                                <div class="icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="details">
+                                    <h3>Email</h3>
+                                    <a href="mailto:hello@mncreatives.com">marielraboy@gmail.com</a>
+                                </div>
+                            </div>
+
+                            <div class="method">
+                                <div class="icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="details">
+                                    <h3>Phone</h3>
+                                    <a href="tel:+639261968397">+63 926 196 8397</a>
+                                </div>
+                            </div>
+
+                            <div class="method">
+                                <div class="icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="details">
+                                    <h3>Working Hours</h3>
+                                    <p>Mon - Fri</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="social-links">
+                            <a href="mailto:hello@mncreatives.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                            <a href="https://wa.me/639261968397" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form animate-up">
+                    <form action="https://formspree.io/f/mnnqoeel" method="POST" id="contactForm" onsubmit="return handleSubmit(event)">
+                        <div class="form-header">
+                            <h2>Send a Message</h2>
+                            <p>Fill out the form below and I'll get back to you soon.</p>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="full-name" placeholder="Your name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="service">Service Needed</label>
+                            <select id="service" name="service" required>
+                                <option value="">Select a service</option>
+                                <option value="video-editing">Video Editing</option>
+                       
+                                <option value="graphic-design">Graphic Design</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Project Details</label>
+                            <textarea id="message" name="message" rows="6" 
+                                    placeholder="Tell me about your project..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">
+                            Send Message
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>Common Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>What is your typical turnaround time?</h3>
+                    <p>Turnaround time varies by project complexity. Simple edits typically take 2-3 days, while larger projects may take 1-2 weeks.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What are your payment terms?</h3>
+                    <p>I require a 50% deposit to begin work, with the remaining balance due upon project completion.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do you offer revisions?</h3>
+                    <p>Yes, all projects include 2 rounds of revisions to ensure your complete satisfaction.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What file formats do you work with?</h3>
+                    <p>I work with all major video and design file formats, including MP4, MOV, AI, PSD, and more.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+      <!-- Footer -->
+      <footer>
+        <div class="footer-container">
+            <!-- Main Footer Content -->
+            <div class="footer-main">
+                <!-- Brand Column -->
+                <div class="footer-brand">
+                    <img src="images/MN CREATIVES 2 Circle.png" alt="MN Creatives Logo" class="footer-logo" style="width: 200px; height: 200px;">
+                    <p>Professional video editing and graphic design services to bring your vision to life.</p>
+                    <div class="social-links">
+                        <a href="mailto:hello@mncreatives.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="https://wa.me/639261968397" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="#">Video Editing</a></li>
+                            <li><a href="#">Graphic Design</a></li>
+             
+                        </ul>
+                    </div>
+
+                    <div class="link-group">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Portfolio</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="link-group">
+                        <h4>Contact</h4>
+                        <ul>
+                            <li><a href="mailto:marielsocmedservices99@gmail.com">marielsocmedservices99@gmail.com</a></li>
+                            <li><a href="tel:+639261968397">+63 926 196 8397</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <span>© 2024 MN Creatives. All rights reserved.</span>
+                <div class="legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+                <div class="developer-credit">
+                    <p>Website designed and developed by <a href="https://rbs-repository.github.io/Budaque/" target="_blank" rel="noopener noreferrer">BMMC</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+
+    <!-- Add this JavaScript before the closing body tag -->
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            const form = event.target;
+            const formData = new FormData(form);
+
+            // Show loading state
+            Swal.fire({
+                title: 'Sending...',
+                text: 'Please wait while we send your message',
+                allowOutsideClick: false,
+                showConfirmButton: false,
+                willOpen: () => {
+                    Swal.showLoading();
+                }
+            });
+
+            fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    form.reset(); // Reset the form
+                    // Show success message
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Thank You!',
+                        text: 'Your message has been sent successfully. I\'ll get back to you soon!',
+                        confirmButtonColor: '#4CAF50'
+                    });
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                // Show error message
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'There was a problem sending your message. Please try again.',
+                    confirmButtonColor: '#d33'
+                });
+            });
+
+            return false;
+        }
+    </script>
+</body>
+</html>
